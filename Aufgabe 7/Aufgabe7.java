@@ -1,49 +1,24 @@
-import java.util.LinkedList;
+// Aufgabe7.java
 
-import org.stringtemplate.v4.ST;
 import org.stringtemplate.v4.STGroupFile;
+import org.stringtemplate.v4.ST;
+
+import java.util.Arrays;
 
 public final class Aufgabe7 {
+    private Aufgabe7() {
+    }
+
     public static void main(String[] args) throws Exception {
-        var list = new LinkedList<ClassInfo>();
-        list.add(new ClassInfo(Class.forName("java.lang.String")));
-        list.add(new ClassInfo(Class.forName("java.util.LinkedList")));
-        list.add(new ClassInfo(Class.forName("java.util.Iterator")));
-        list.add(new ClassInfo(Class.forName("java.time.Month")));
-
-        ST template = new STGroupFile("aufgabe7.stg").getInstanceOf("aufgabe7");
-        template.add("list", list);
-
-        String result = template.render();
-        System.out.println(result);
-
-    }
-}
-
-final class ClassInfo {
-    public final String name;
-    public LinkedList<InterfaceInfo> interfaces;
-
-    public ClassInfo(Class<?> c) {
-        this.name = c.getName();
-        this.interfaces = new LinkedList<>();
-        for (var info : c.getInterfaces()) {
-            var currentInterface = new InterfaceInfo(info.getName());
-
-            for (var method : info.getMethods()) {
-                currentInterface.methods.add(method.getReturnType().getName() + " " + method.getName());
-            }
-            this.interfaces.add(currentInterface);
+        Class<?>[] classes = new Class<?>[args.length];
+        for(int i = 1, k = 0; i < args.length; i++, k++) {
+            classes[k] = Class.forName(args[i]);
         }
-    }
-}
 
-final class InterfaceInfo {
-    public final String name;
-    public final LinkedList<String> methods;
+        ST templ = new STGroupFile(args[0]).getInstanceOf("aufgabe7");
+        templ.add("n", classes);
+        String result = templ.render();
 
-    public InterfaceInfo(String name) {
-        this.name = name;
-        this.methods = new LinkedList<>();
+        System.out.println(result);
     }
 }

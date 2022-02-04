@@ -1,45 +1,61 @@
-// aufgabe7.stg
+// Aufgabe7.stg
 delimiters "$", "$"
 
-aufgabe7(list) ::= <<
+aufgabe7(n) ::= <<
 <!DOCTYPE html>
 <html lang="de">
-    <head>
-        <style type="text/css">
-        th, td { border-bottom: thin solid; padding: 4px; text-align: left; }
-        td { font-family: monospace }
-        </style>
-    </head>
-    <body>
-        <h1>Sprachkonzepte, Aufgabe 7</h1>
-        <b>aufgabe7</b>
-        <table>
-            $list:classInfo(); separator="\n"$
-        </table>
-    </body>
+<head>
+<style type="text/css">
+th, td { border-bottom: thin solid; padding: 4px; text-align: left; }
+td { font-family: monospace }
+</style>
+</head>
+<body>
+<h1>Sprachkonzepte, Aufgabe 7</h1>
+
+$n:classInfo(); separator="\n"$
+
+</body>
 </html>
 >>
 
-classInfo(c) ::= <<
-<h2>class $c.name$</h2>
-<table>
-    <tr>
-        <th>Interface</th>
-        <th>Methods</th>
-    </tr>
-    $c.interfaces:interfaceInfo(); separator="\n"$
-</table>
-<br>
+classInfo(o) ::= <<
+$if(o.interface)$
+$o:classObject()$
+$else$
+$o:interfaceObject()$
+$endif$
 >>
 
-interfaceInfo(i) ::= <<
+interfaceObject(c) ::= <<
+<h1>$c$</h1>
+<table>
 <tr>
-    <td valign=top>$i.name$</td>
-    <td>
-    $i.methods :{
-        m | $m$ <br>
-    }$
-    </td>
+<th>Interface</th>
+<th>Methods</th>
+</tr>
+$c.interfaces:interfaces(); separator="\n"$
+</table>
+>>
+
+classObject(c) ::= <<
+<h1>$c$</h1>
+<table>
+<tr>
+<th>Methods</th>
+</tr>
+<td>$c.methods:methods(); separator="\n"$</td>
+</table>
+>>
+
+interfaces(i) ::= <<
+<tr>
+<td>$i$</td>
+<td>$i.Methods:methods(); separator="\n"$</td>
 </tr>
 >>
 
+methods(m) ::= <<
+$m$
+<br>
+>>
