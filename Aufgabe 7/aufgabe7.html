@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<style type="text/css">
+th, td { border-bottom: thin solid; padding: 4px; text-align: left; }
+td { font-family: monospace }
+</style>
+</head>
+<body>
+<h1>Sprachkonzepte, Aufgabe 7</h1>
+
+<h1>class java.lang.String</h1>
+<table>
+<tr>
+<th>Interface</th>
+<th>Methods</th>
+</tr>
+<tr>
+<td>interface java.io.Serializable</td>
+<td></td>
+</tr>
+<tr>
+<td>interface java.lang.Comparable</td>
+<td>public abstract int java.lang.Comparable.compareTo(java.lang.Object)
+<br></td>
+</tr>
+<tr>
+<td>interface java.lang.CharSequence</td>
+<td>public abstract int java.lang.CharSequence.length()
+<br>
+public abstract java.lang.String java.lang.CharSequence.toString()
+<br>
+public default java.util.stream.IntStream java.lang.CharSequence.codePoints()
+<br>
+public abstract char java.lang.CharSequence.charAt(int)
+<br>
+public abstract java.lang.CharSequence java.lang.CharSequence.subSequence(int,int)
+<br>
+public default java.util.stream.IntStream java.lang.CharSequence.chars()
+<br>
+public static int java.lang.CharSequence.compare(java.lang.CharSequence,java.lang.CharSequence)
+<br></td>
+</tr>
+</table>
+
+<h1>class java.util.LinkedList</h1>
+<table>
+<tr>
+<th>Interface</th>
+<th>Methods</th>
+</tr>
+<tr>
+<td>interface java.util.List</td>
+<td>public abstract void java.util.List.add(int,java.lang.Object)
+<br>
+public abstract boolean java.util.List.add(java.lang.Object)
+<br>
+public abstract boolean java.util.List.remove(java.lang.Object)
+<br>
+public abstract java.lang.Object java.util.List.remove(int)
+<br>
+public abstract java.lang.Object java.util.List.get(int)
+<br>
+public abstract boolean java.util.List.equals(java.lang.Object)
+<br>
+public abstract int java.util.List.hashCode()
+<br>
+public static java.util.List java.util.List.copyOf(java.util.Collection)
+<br>
+public abstract int java.util.List.indexOf(java.lang.Object)
+<br>
+public abstract void java.util.List.clear()
+<br>
+public abstract boolean java.util.List.isEmpty()
+<br>
+public abstract int java.util.List.lastIndexOf(java.lang.Object)
+<br>
+public abstract boolean java.util.List.contains(java.lang.Object)
+<br>
+public default void java.util.List.replaceAll(java.util.function.UnaryOperator)
+<br>
+public abstract int java.util.List.size()
+<br>
+public abstract java.util.List java.util.List.subList(int,int)
+<br>
+public abstract java.lang.Object[] java.util.List.toArray()
+<br>
+public abstract java.lang.Object[] java.util.List.toArray(java.lang.Object[])
+<br>
+public abstract java.util.Iterator java.util.List.iterator()
+<br>
+public default java.util.Spliterator java.util.List.spliterator()
+<br>
+public abstract boolean java.util.List.addAll(int,java.util.Collection)
+<br>
+public abstract boolean java.util.List.addAll(java.util.Collection)
+<br>
+public abstract java.lang.Object java.util.List.set(int,java.lang.Object)
+<br>
+public static java.util.List java.util.List.of(java.lang.Object,java.lang.Object)
+<br>
+public static java.util.List java.util.List.of(java.lang.Object)
+<br>
+public static java.util.List java.util.List.of(java.lang.Object,java.lang.Object,java.lang.Object,java.lang.Object,java.lang.Object)
+<br>
+public static java.util.List java.util.List.of(java.lang.Object,java.lang.Object,java.lang.Object,java.lang.Object)
+<br>
+public static java.util.List java.util.List.of(java.lang.Object,java.lang.Object,java.lang.Object,java.lang.Object,java.lang.Object,java.lang.Object)
+<br>
+public static java.util.List java.util.List.of(java.lang.Object,java.lang.Object,java.lang.Object)
+<br>
+public static java.util.List java.util.List.of(java.lang.Object,java.lang.Object,java.lang.Object,java.lang.Object,java.lang.Object,java.lang.Object,java.lang.Object,java.lang.Object,java.lang.Object)
+<br>
+public static java.util.List java.util.List.of(java.lang.Object,java.lang.Object,java.lang.Object,java.lang.Object,java.lang.Object,java.lang.Object,java.lang.Object,java.lang.Object,java.lang.Object,java.lang.Object)
+<br>
+public static java.util.List java.util.List.of(java.lang.Object[])
+<br>
+public static java.util.List java.util.List.of(java.lang.Object,java.lang.Object,java.lang.Object,java.lang.Object,java.lang.Object,java.lang.Object,java.lang.Object,java.lang.Object)
+<br>
+public static java.util.List java.util.List.of(java.lang.Object,java.lang.Object,java.lang.Object,java.lang.Object,java.lang.Object,java.lang.Object,java.lang.Object)
+<br>
+public static java.util.List java.util.List.of()
+<br>
+public abstract boolean java.util.List.containsAll(java.util.Collection)
+<br>
+public abstract boolean java.util.List.retainAll(java.util.Collection)
+<br>
+public abstract boolean java.util.List.removeAll(java.util.Collection)
+<br>
+public default void java.util.List.sort(java.util.Comparator)
+<br>
+public abstract java.util.ListIterator java.util.List.listIterator()
+<br>
+public abstract java.util.ListIterator java.util.List.listIterator(int)
+<br>
+public default java.lang.Object[] java.util.Collection.toArray(java.util.function.IntFunction)
+<br>
+public default java.util.stream.Stream java.util.Collection.stream()
+<br>
+public default boolean java.util.Collection.removeIf(java.util.function.Predicate)
+<br>
+public default java.util.stream.Stream java.util.Collection.parallelStream()
+<br>
+public default void java.lang.Iterable.forEach(java.util.function.Consumer)
+<br></td>
+</tr>
+<tr>
+<td>interface java.util.Deque</td>
+<td>public abstract boolean java.util.Deque.offerFirst(java.lang.Object)
+<br>
+public abstract boolean java.util.Deque.offerLast(java.lang.Object)
+<br>
+public abstract java.lang.Object java.util.Deque.removeFirst()
+<br>
+public abstract java.lang.Object java.util.Deque.removeLast()
+<br>
+public abstract java.lang.Object java.util.Deque.pollLast()
+<br>
+public abstract java.lang.Object java.util.Deque.getFirst()
+<br>
+public abstract java.lang.Object java.util.Deque.getLast()
+<br>
+public abstract java.lang.Object java.util.Deque.peekFirst()
+<br>
+public abstract java.lang.Object java.util.Deque.peekLast()
+<br>
+public abstract boolean java.util.Deque.removeFirstOccurrence(java.lang.Object)
+<br>
+public abstract boolean java.util.Deque.removeLastOccurrence(java.lang.Object)
+<br>
+public abstract boolean java.util.Deque.offer(java.lang.Object)
+<br>
+public abstract java.lang.Object java.util.Deque.pop()
+<br>
+public abstract java.util.Iterator java.util.Deque.descendingIterator()
+<br>
+public abstract void java.util.Deque.push(java.lang.Object)
+<br>
+public abstract void java.util.Deque.addLast(java.lang.Object)
+<br>
+public abstract java.lang.Object java.util.Deque.pollFirst()
+<br>
+public abstract void java.util.Deque.addFirst(java.lang.Object)
+<br>
+public abstract boolean java.util.Deque.add(java.lang.Object)
+<br>
+public abstract boolean java.util.Deque.remove(java.lang.Object)
+<br>
+public abstract java.lang.Object java.util.Deque.remove()
+<br>
+public abstract boolean java.util.Deque.contains(java.lang.Object)
+<br>
+public abstract int java.util.Deque.size()
+<br>
+public abstract java.util.Iterator java.util.Deque.iterator()
+<br>
+public abstract boolean java.util.Deque.addAll(java.util.Collection)
+<br>
+public abstract java.lang.Object java.util.Deque.poll()
+<br>
+public abstract java.lang.Object java.util.Deque.peek()
+<br>
+public abstract java.lang.Object java.util.Deque.element()
+<br>
+public abstract boolean java.util.Collection.equals(java.lang.Object)
+<br>
+public abstract int java.util.Collection.hashCode()
+<br>
+public abstract void java.util.Collection.clear()
+<br>
+public abstract boolean java.util.Collection.isEmpty()
+<br>
+public default java.lang.Object[] java.util.Collection.toArray(java.util.function.IntFunction)
+<br>
+public abstract java.lang.Object[] java.util.Collection.toArray()
+<br>
+public abstract java.lang.Object[] java.util.Collection.toArray(java.lang.Object[])
+<br>
+public default java.util.Spliterator java.util.Collection.spliterator()
+<br>
+public default java.util.stream.Stream java.util.Collection.stream()
+<br>
+public abstract boolean java.util.Collection.containsAll(java.util.Collection)
+<br>
+public abstract boolean java.util.Collection.retainAll(java.util.Collection)
+<br>
+public abstract boolean java.util.Collection.removeAll(java.util.Collection)
+<br>
+public default boolean java.util.Collection.removeIf(java.util.function.Predicate)
+<br>
+public default java.util.stream.Stream java.util.Collection.parallelStream()
+<br>
+public default void java.lang.Iterable.forEach(java.util.function.Consumer)
+<br></td>
+</tr>
+<tr>
+<td>interface java.lang.Cloneable</td>
+<td></td>
+</tr>
+<tr>
+<td>interface java.io.Serializable</td>
+<td></td>
+</tr>
+</table>
+
+<h1>interface java.util.Iterator</h1>
+<table>
+<tr>
+<th>Methods</th>
+</tr>
+<td>public default void java.util.Iterator.remove()
+<br>
+public default void java.util.Iterator.forEachRemaining(java.util.function.Consumer)
+<br>
+public abstract java.lang.Object java.util.Iterator.next()
+<br>
+public abstract boolean java.util.Iterator.hasNext()
+<br></td>
+</table>
+
+<h1>class java.time.Month</h1>
+<table>
+<tr>
+<th>Interface</th>
+<th>Methods</th>
+</tr>
+<tr>
+<td>interface java.time.temporal.TemporalAccessor</td>
+<td>public default java.time.temporal.ValueRange java.time.temporal.TemporalAccessor.range(java.time.temporal.TemporalField)
+<br>
+public default int java.time.temporal.TemporalAccessor.get(java.time.temporal.TemporalField)
+<br>
+public abstract long java.time.temporal.TemporalAccessor.getLong(java.time.temporal.TemporalField)
+<br>
+public default java.lang.Object java.time.temporal.TemporalAccessor.query(java.time.temporal.TemporalQuery)
+<br>
+public abstract boolean java.time.temporal.TemporalAccessor.isSupported(java.time.temporal.TemporalField)
+<br></td>
+</tr>
+<tr>
+<td>interface java.time.temporal.TemporalAdjuster</td>
+<td>public abstract java.time.temporal.Temporal java.time.temporal.TemporalAdjuster.adjustInto(java.time.temporal.Temporal)
+<br></td>
+</tr>
+</table>
+
+
+</body>
+</html>
