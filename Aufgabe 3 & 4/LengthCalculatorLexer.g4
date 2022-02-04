@@ -1,8 +1,8 @@
 //LengthCalculatorLexer.g4
 lexer grammar LengthCalculatorLexer;
 
-Length: Number ('.' Number)? [ ]* Unit;
-Unit: ('c'|[kcd]?'m');
+Length: Number ('.' Number)? [ ]+ Unit;
+Unit: ('ly'|[kcd]?'m');
 
 fragment Number: ([0-9])+;
 

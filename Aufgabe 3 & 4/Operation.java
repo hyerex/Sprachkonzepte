@@ -18,4 +18,16 @@ public class Operation extends LengthCalculator{
     public String toString() {
         return "(" + this.left + this.op + this.right + ")";
     }
+
+    @Override
+    public double unitsInMeter() {
+        // TODO Auto-generated method stub
+        var left = this.left.unitsInMeter();
+        var right = this.right.unitsInMeter();
+
+        if (this.op.equals("+")) {
+            return left + right;
+        }
+        return left - right;
+    }
 }   

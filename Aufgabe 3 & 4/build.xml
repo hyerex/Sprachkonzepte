@@ -23,6 +23,13 @@
         </jar>
     </target>
 
+    <target name="interpreter" depends="compile">
+        <jar destfile="${grammar}Interpreter.jar">
+            <fileset dir="." includes="*.class" />
+            <zipfileset includes="**/*.class" src="${antlr}" />
+        </jar>
+    </target>
+
     <target name="compile" depends="generate">
         <javac debug="on" srcdir="." destdir="." sourcepath=""
                listfiles="true" includeantruntime="false">

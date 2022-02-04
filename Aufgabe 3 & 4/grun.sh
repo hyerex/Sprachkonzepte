@@ -7,5 +7,3 @@ eval $c
 gui="java -cp LengthCalculator.jar org.antlr.v4.gui.TestRig LengthCalculator start -gui $1"
 echo $gui
 eval $gui
-
-java -cp LengthCalculatorToAst.jar LengthCalculatorToAst
