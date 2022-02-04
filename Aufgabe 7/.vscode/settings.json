@@ -1,0 +1,6 @@
+{
+    "java.project.referencedLibraries": [
+        "/usr/local/lib/*.jar",
+        "../ST-4.3.1.jar"
+    ],
+}

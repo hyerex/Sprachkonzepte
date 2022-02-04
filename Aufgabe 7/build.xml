@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<project default="jar">
+
+    <property name="executable" value="Aufgabe7" />
+    <property name="st" value="ST-4.3.1.jar" />
+    <property name="antlr" value="../antlr-4.9.2-complete.jar" />
+
+    <target name="jar" depends="compile">
+        <jar destfile="${executable}.jar">
+            <fileset dir="." includes="*.class" />
+            <zipfileset includes="**/*.class" src="${st}" />
+            <zipfileset includes="**/*.class" src="${antlr}" />
+        </jar>
+    </target>
+
+    <target name="compile">
+        <javac debug="on" srcdir="." destdir="." sourcepath="" listfiles="true" includeantruntime="false">
+            <classpath>
+                <pathelement location="${st}" />
+            </classpath>
+            <include name="${executable}.java" />
+        </javac>
+    </target>
+
+    <target name="clean">
+        <delete>
+            <fileset dir="." includes="${executable}.jar" />
+            <fileset dir="." includes="ST-4.3.1.jar" />
+            <fileset dir="." includes="*.class" />
+        </delete>
+    </target>
+
+    <target name="lib">
+        <exec executable="curl">
+            <arg value="-O" />
+            <arg value="https://www.stringtemplate.org/download/ST-4.3.1.jar" />
+        </exec>
+    </target>
+
+</project>

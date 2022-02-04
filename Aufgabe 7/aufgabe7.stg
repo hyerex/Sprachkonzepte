@@ -1,0 +1,45 @@
+// aufgabe7.stg
+delimiters "$", "$"
+
+aufgabe7(list) ::= <<
+<!DOCTYPE html>
+<html lang="de">
+    <head>
+        <style type="text/css">
+        th, td { border-bottom: thin solid; padding: 4px; text-align: left; }
+        td { font-family: monospace }
+        </style>
+    </head>
+    <body>
+        <h1>Sprachkonzepte, Aufgabe 7</h1>
+        <b>aufgabe7</b>
+        <table>
+            $list:classInfo(); separator="\n"$
+        </table>
+    </body>
+</html>
+>>
+
+classInfo(c) ::= <<
+<h2>class $c.name$</h2>
+<table>
+    <tr>
+        <th>Interface</th>
+        <th>Methods</th>
+    </tr>
+    $c.interfaces:interfaceInfo(); separator="\n"$
+</table>
+<br>
+>>
+
+interfaceInfo(i) ::= <<
+<tr>
+    <td valign=top>$i.name$</td>
+    <td>
+    $i.methods :{
+        m | $m$ <br>
+    }$
+    </td>
+</tr>
+>>
+
