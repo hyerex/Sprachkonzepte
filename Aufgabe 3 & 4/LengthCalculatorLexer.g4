@@ -10,9 +10,9 @@ PLUS: '+';
 MINUS: '-';
 LPAREN: '(';
 RPAREN: ')';
-EQ: '=';
 POINT: '.';
-COLON: ',';
 DPOINT: ':';
 
 WS: [ \t\r\n]+ -> channel(HIDDEN);
+
+
