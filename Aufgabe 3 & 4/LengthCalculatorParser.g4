@@ -3,7 +3,7 @@ parser grammar LengthCalculatorParser;
 
 options { tokenVocab=LengthCalculatorLexer; }
 
-start : unit? expr EOF;
+start : unit expr EOF;
 
 expr : primary | expr (PLUS | MINUS) primary;
 

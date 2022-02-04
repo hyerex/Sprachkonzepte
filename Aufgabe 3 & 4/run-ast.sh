@@ -2,4 +2,4 @@
 ant
 ant ast
 
-java -cp LengthCalculatorInterpreter.jar LengthCalculatorInterpreter < beispiel.txt
+java -cp LengthCalculatorToAst.jar LengthCalculatorToAst < beispiel.txt
